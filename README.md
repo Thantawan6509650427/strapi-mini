@@ -117,9 +117,11 @@ export PATH=~/.npm-global/bin:$PATH
 source ~/.profile
 ```
 5. ติดตั้ง package ลงโปรเจกต์ในเครื่องของเรา
+```
 cd ที่อยู่โปรเจกต์ในEC2
 yarn add pg
 yarn add @strapi/provider-upload-aws-s3
+```
 6. แก้ไข config โปรเจกต์ที่ ./config/plugins.js ในเครื่องของเรา
 ```
 module.exports = ({ env }) => ({
@@ -165,7 +167,7 @@ git clone https://github.com/ชื่อในgithub/ชื่อrepository.git
 ```
 cd ที่อยู่โปรเจกต์ในEC2
 # ติดตั้ง Dependencies
-ืnpm install 
+npm install 
 # NODE_ENV=production npm run build
 NODE_ENV=production npm run build
 ```
@@ -221,6 +223,11 @@ sudo reboot
 
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+
+## reference
+- [Resource](https://docs.strapi.io/dev-docs/installation/cli)
+- [Resource](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
+- [How to Write a Good README](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 
 ## 📚 Learn more
 
