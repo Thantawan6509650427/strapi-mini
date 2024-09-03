@@ -225,9 +225,11 @@ sudo reboot
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
 ## reference
-- [Resource](https://docs.strapi.io/dev-docs/installation/cli)
-- [Resource](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
+- [Install strapi with CLI](https://docs.strapi.io/dev-docs/installation/cli)
+- [ศึกษาไฟล์.gitignore](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
 - [How to Write a Good README](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+- [Deployment](https://docs.strapi.io/dev-docs/deployment)
+
 
 ## 📚 Learn more
 
