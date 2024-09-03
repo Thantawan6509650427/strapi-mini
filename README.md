@@ -54,16 +54,6 @@ npm run develop
 yarn develop
 ```
 
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
 ## ไฟล์ .gitignore 
 มีวัตถุประสงค์เพื่อกำหนดไฟล์และไดเรกทอรีที่ Git ควรเพิกเฉยเมื่อทำการ commit 
 1. ป้องกันการติดตามไฟล์ที่ไม่ต้องการ: ไฟล์ที่มีการสร้างโดยอัตโนมัติ เช่น ไฟล์ลอกรหัสหรือไฟล์การตั้งค่าเฉพาะบุคคลที่ไม่ควรแชร์กับคนอื่น
@@ -88,10 +78,10 @@ yarn start
 ## ⚙️ Deployment (การ Deploy ลง AWS)
 1. สร้าง AWS EC2 Instance
 2. ตั้งค่า Security Group ของ EC2 ในส่วน Inbound
-Type: SSH, Protocol: TCP, Port Range: 22, Source: ::/0
-Type: HTTP, Protocol: TCP, Port Range: 80, Source: 0.0.0.0/0, ::/0
-Type: HTTPS, Protocol: TCP, Port Range: 443, Source: 0.0.0.0/0, ::/0
-Custom TCP Rule, Protocol: TCP, Port Range: 1337, Source: 0.0.0.0/0
+- Type: SSH, Protocol: TCP, Port Range: 22, Source: ::/0
+- Type: HTTP, Protocol: TCP, Port Range: 80, Source: 0.0.0.0/0, ::/0
+- Type: HTTPS, Protocol: TCP, Port Range: 443, Source: 0.0.0.0/0, ::/0
+- Custom TCP Rule, Protocol: TCP, Port Range: 1337, Source: 0.0.0.0/0
 3. ติดตั้ง NodeJS ลงบน EC2
 ```
 cd ~
@@ -122,7 +112,7 @@ cd ที่อยู่โปรเจกต์ในEC2
 yarn add pg
 yarn add @strapi/provider-upload-aws-s3
 ```
-6. แก้ไข config โปรเจกต์ที่ ./config/plugins.js ในเครื่องของเรา
+6. แก้ไข config โปรเจกต์ที่ ./config/plugins.js ในเครื่องของเรา (เช่น vscode)
 ```
 module.exports = ({ env }) => ({
       upload: {
@@ -224,7 +214,7 @@ sudo reboot
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
-## reference
+## Reference
 - [Install strapi with CLI](https://docs.strapi.io/dev-docs/installation/cli)
 - [ศึกษาไฟล์.gitignore](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
 - [How to Write a Good README](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
